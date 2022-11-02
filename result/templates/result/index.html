@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'result/style.css' %}">
+    <title>Result</title>
+</head>
+<body>
+    <div class="main">
+        <div class="result-indiv">
+            <div class="heading">
+                <div class="logo">
+                    <img src="{% static 'result/govt.png' %}">
+                </div>
+                <div class="title">
+                    <h3>MBBS Result 2021-22</h3>
+                    <h4>Directorate General of Health Services</h4>
+                </div>
+            </div>
+            <div class="roll-input">
+                <form action="{% url 'result' %}">
+                    <input type="text" name="roll" class="rollbox" placeholder="Enter Roll">
+                    <input type="submit" class="btn" value="Search">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

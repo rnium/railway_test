@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: gray;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+body {
+  background-color: rgba(202, 224, 214, 0.932);
+}
+
+body .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main .result-indiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  margin: auto;
+  margin-top: 4em;
+  padding-bottom: 1em;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px rgba(199, 199, 199, 0.664);
+          box-shadow: 0 0 10px rgba(199, 199, 199, 0.664);
+}
+
+body .main .result-indiv .heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1.5em;
+}
+
+body .main .result-indiv .heading .logo {
+  margin-right: 1em;
+}
+
+body .main .result-indiv .heading .logo img {
+  width: 70px;
+}
+
+body .main .result-indiv .heading .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main .result-indiv .heading .title h3 {
+  color: #049e9e;
+  text-shadow: 0 0 3px #e9e9e9;
+}
+
+body .main .result-indiv .roll-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  margin-bottom: 1.5em;
+}
+
+body .main .result-indiv .roll-input form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main .result-indiv .roll-input form .rollbox {
+  width: 70%;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid #d0d1d1;
+  background-color: #f7f7f7;
+  margin-right: 3%;
+  padding: 0 1em;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+body .main .result-indiv .roll-input form .btn {
+  width: 27%;
+  height: 40px;
+  border-radius: 5px;
+  border: 0;
+  background-color: #019c9c;
+  color: white;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-shadow: 0 0 5px rgba(210, 211, 211, 0.623);
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  -webkit-box-shadow: 0 0 5px rgba(3, 240, 240, 0.1);
+          box-shadow: 0 0 5px rgba(3, 240, 240, 0.1);
+}
+
+body .main .result-indiv .roll-input form .btn:hover {
+  background-color: #01b4b4;
+  cursor: pointer;
+}
+
+body .main .result-indiv .roll-input form .btn:active {
+  background-color: #019696;
+}
+
+body .main .result-indiv .error {
+  padding: 0.3em 2em;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fcd8d8;
+  -webkit-box-shadow: 0 0 5px rgba(255, 164, 164, 0.1);
+          box-shadow: 0 0 5px rgba(255, 164, 164, 0.1);
+}
+
+body .main .result-indiv .error svg, body .main .result-indiv .error .error-text {
+  color: red;
+  font-weight: 500;
+}
+
+body .main .result-indiv .error .error-text {
+  margin-left: 0.5em;
+}
+
+body .main .result-indiv .result {
+  margin: 0 1em;
+  padding: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 15px rgba(231, 231, 231, 0.753);
+          box-shadow: 0 0 15px rgba(231, 231, 231, 0.753);
+}
+
+body .main .result-indiv .result table tr:nth-child(even) {
+  background-color: #fdfdfd;
+}
+
+body .main .result-indiv .result table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+
+body .main .result-indiv .result table td, body .main .result-indiv .result table th {
+  padding: 0.5em 1em;
+}
+
+body .main .result-indiv .result table td {
+  font-weight: 500;
+}
+/*# sourceMappingURL=style.css.map */

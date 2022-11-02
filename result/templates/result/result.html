@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'result/style.css' %}">
+    <title>Result</title>
+</head>
+<body>
+    <div class="main">
+        <div class="result-indiv">
+            <div class="heading">
+                <div class="logo">
+                    <img src="{% static 'result/govt.png' %}">
+                </div>
+                <div class="title">
+                    <h3>MBBS Result 2021-22</h3>
+                    <h4>Directorate General of Health Services</h4>
+                </div>
+            </div>
+            <div class="roll-input">
+                <form action="{% url 'result' %}">
+                    <input type="text" name="roll" class="rollbox" placeholder="Enter Roll">
+                    <input type="submit" class="btn" value="Search">
+                </form>
+            </div>
+            {% if error %}
+            <div class="error">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-info-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                </svg>
+                <div class="error-text">{{ error }}</div>
+            </div>
+            {% endif %}
+            {% if result %}
+            <div class="result">
+                <table>
+                    <tr>
+                        <th>Roll</th>
+                        <td>{{ result.roll }}</td>
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <td>{{ result.name }}</td>
+                    </tr>
+                    <tr>
+                        <th>Test Score</th>
+                        <td>{{ result.test_score }}</td>
+                    </tr>
+                    <tr>
+                        <th>Merit Score</th>
+                        <td>{{ result.merit_score }}</td>
+                    </tr>
+                    <tr>
+                        <th>Position</th>
+                        <td>{{ result.position }}</td>
+                    </tr>
+                    <tr>
+                        <th>Alloted College</th>
+                        <td>{{ result.college }}</td>
+                    </tr>
+                    <tr>
+                        <th>Selection</th>
+                        <td>{{ result.selection }}</td>
+                    </tr>
+                </table>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

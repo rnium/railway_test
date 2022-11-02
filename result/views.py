@@ -1,7 +1,5 @@
-from turtle import position
 from django.shortcuts import render, get_object_or_404
 from .models import Result
-from django.views import generic
 
 def homepage(request):
     return render(request, 'result/index.html')
